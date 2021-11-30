@@ -22,5 +22,7 @@ public class Main {
         exm2.stat.res.Init(30, 50, 20);
         exm2.Init("Леон", 48, "Человек", exm2.arm, exm2.weap, exm2.stat, exm2.stat.res, guild); /*Создание персонажа для примера*/
         exm2.Print();
+
+        System.out.println("\nКоличество созданных персонажей:" +  Character.GetCount());
     }
 }

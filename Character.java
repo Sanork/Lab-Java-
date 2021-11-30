@@ -6,7 +6,7 @@ public class Character {
     private String name; /*Имя*/
     private int lvl; /*Уровень*/
     private String race; /*Раса*/
-    public static int count = 0;
+    private static int count = 0;
     private int id;
     public Guild guild; //{ get; set; }   /*Информация о гильдии*/
     public Armor arm ; /*Класс брони*/
@@ -63,4 +63,9 @@ public class Character {
         this.stat.Print();
         this.guild.Print();
     }
+    static public int GetCount()
+    {
+        return count;
+    }
+
 }
