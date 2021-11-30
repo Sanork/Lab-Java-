@@ -6,6 +6,8 @@ public class Character {
     private String name; /*Имя*/
     private int lvl; /*Уровень*/
     private String race; /*Раса*/
+    public static int count = 0;
+    private int id;
     public Guild guild; //{ get; set; }   /*Информация о гильдии*/
     public Armor arm ; /*Класс брони*/
     public Weapon weap; /*Класс оружия*/
@@ -27,6 +29,8 @@ public class Character {
         this.weap = weap;
         this.stat = st;
         this.guild = gld;
+        count++;
+        id = count;
     }
 
     public void Input()  /*Создание персонажа вручную с консоли*/
@@ -43,12 +47,15 @@ public class Character {
         this.weap.Input();
         this.stat.Input();
         this.guild.Input();
+        count++;
+        id = count;
     }
 
     public void Print() /*Вывод информации о персонаже*/
     {
        System.out.println("Персонаж: ");
        System.out.println("Имя - " + this.name);
+       System.out.println("ID - " + id);
        System.out.println("Уровень - " + this.lvl);
        System.out.println("Раса - " + this.race);
         this.arm.Print();
